@@ -335,7 +335,7 @@ d3.timer(function () {
 
 	debug.attr('transform', function(d) {
 		var x = d.path[0][0];
-		var y = d.path[0][1] + 20;
+		var y = d.path[0][1] + 25;
 		return 'translate(' + [ x, y ] + ')';
 	})
 	.text(function (d) {
