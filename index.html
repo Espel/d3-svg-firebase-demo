@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 + SVG + Firebase</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:700italic' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="./css/base.css" />
+		<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.29.1"></script>
+		<script src='./js/zepto.js'></script>
+	</head>
+
+	<body class="">
+		<div class="content container">
+			<div class="page-header">
+				<h1>D3 + SVG + Firebase</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" style="min-width: 1062px;">
+				<style type="text/css">
+				circle.shit {
+					stroke-width: 1;
+					stroke: rgba(0, 204, 255, 0.7);
+					stroke: #8fdcec;
+					fill: transparent;
+				}
+
+				circle.handle {
+					cursor: pointer;
+					stroke-width: 6;
+					stroke: rgba(194, 194, 194, 0);
+					fill: transparent;
+					stroke-dasharray: 40, 12;
+				}
+
+				circle.handle:hover {
+					stroke: rgba(194, 194, 194, 0.2);
+				}
+
+				circle.handle.active {
+					stroke: rgba(254, 94, 58, 0.8);
+					stroke-dasharray: 40, 12;
+				}
+
+				marker#testmarker path {
+				  fill: green;
+				  stroke: red;
+				  stroke-width: 2px;
+				}
+
+				circle.handle2 {
+					cursor: pointer;
+					stroke-width: 1;
+					stroke: rgba(255, 255, 255, 0);
+					fill: transparent;
+				/*	stroke-dasharray: 2, 62; */
+				}
+
+				circle.signal {
+					fill: #e9ddaf;
+					filter: url(#blur2); 
+				}
+
+				circle.signal.active {
+					fill: #ffcc00;
+					filter: url(#blur2);
+				}
+
+				circle.eye, 
+				circle.eye.idle {
+					fill: #555;
+					stroke: #edfbbe;
+					stroke: #0b0b0b;
+					stroke-withh: 0.5px;
+				}
+
+				circle.eye.warn {
+					fill: #ff7f2a;
+				}
+
+				circle.eye.active {
+					fill: #66ff00;
+				}
+
+				circle.eye.error {
+					fill: #f00;
+				}
+
+				ellipse.head {
+					fill: #edfbbe;
+				}
+
+				path.test {
+					fill: #edfbbe;
+				}
+
+				path.test.style1 { fill: #81d0df; }
+				ellipse.head.style1 { fill: #81d0df; }
+				path.tail.style1 { stroke: #81d0df; }
+				path.body.style1 { stroke: #81d0df; }
+
+				path.test.style2 { fill: #ffca00; }
+				ellipse.head.style2 { fill: #ffca00; }
+				path.tail.style2 { stroke: #ffca00; }
+				path.body.style2 { stroke: #ffca00; }
+
+				path.test.style3 { fill: #573f01; }
+				ellipse.head.style3 { fill: #573f01; }
+				path.tail.style3 { stroke: #573f01; }
+				path.body.style3 { stroke: #573f01; }
+
+				path.test.style4 { fill: #fe6b4a; }
+				ellipse.head.style4 { fill: #fe6b4a; }
+				path.tail.style4 { stroke: #fe6b4a; }
+				path.body.style4 { stroke: #fe6b4a; }
+
+				path.test.style5 { fill: #c1c1c1; }
+				ellipse.head.style5 { fill: #c1c1c1; }
+				path.tail.style5 { stroke: #c1c1c1; }
+				path.body.style5 { stroke: #c1c1c1; }
+
+				path.tail {
+					fill: none;
+					stroke: #edfbbe;
+					stroke-width: 4px;
+					stroke-linecap: round;
+				}
+
+				path.body {
+					display: none;
+					fill: none;
+					stroke: #edfbbe;
+					stroke-width: 5px;
+					stroke-linecap: round;
+				}
+
+				text.debug {
+					font-samily: sans-serif;
+					fill: #ff613a;
+					font-size: 12px;
+					opacity: 0.75;
+					text-align: center;
+					display-align: center;
+				}
+
+				path.debug {
+					stroke-width: 1px;
+					stroke: #ff613a;
+				}
+
+				</style>
+
+				<div class="row agents">
+					<div class="span12">
+						<div id="canvas"></div>
+					</div>
+				</div>
+
+				<script type="text/javascript" src="./js/agents.js"></script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
