@@ -1,0 +1,155 @@
+@font-face{ 
+	font-family: 'CP Mono';
+	src: url('../font/comono_v07/cpmono_v07_plain-webfont.eot');
+	src: url('../font/comono_v07/cpmono_v07_plain-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../font/comono_v07/cpmono_v07_plain-webfont.woff') format('woff'),
+	     url('../font/comono_v07/cpmono_v07_plain-webfont.ttf') format('truetype'),
+	     url('../font/comono_v07/cpmono_v07_plain-webfont.svg#webfont') format('svg');
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f4f4f4;
+	color: #444;
+}
+
+
+:-moz-any-link:focus {
+  outline: none;
+}
+
+#content {
+	margin-top: 150px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#content p {
+	margin-top: 40px;
+}
+
+.agents.row {
+	height: 100%;
+	position: relative;
+	font-size: 11px;
+}
+
+.agents #canvas {
+	position: relative;
+	z-index: 100;
+	height: 520px;
+	border-radius: 4px;
+	box-shadow: inset 9px 9px 72px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.5);
+	background-color: #1f2323;
+	border: 1px solid #060707;
+	-webkit-transition: box-shadow linear 0.5s;
+	transition: box-shadow linear 0.5s;
+	background-image: url(../img/agents-bg3.jpg);
+	background-position: bottom right;
+}
+
+.agents #canvas:hover {
+	box-shadow: inset 9px 9px 72px rgba(0, 0, 0, 1), 0 0 12px rgba(0, 0, 0, 1);
+}
+
+.agents #canvas svg {
+	position: relative;
+	z-index: 150;
+}
+
+.agents .agent-info {
+	position: absolute;
+	z-index: 200;
+	top: 9px;
+	right: 9px;
+}
+
+.agents .agent-info dl {
+	margin: 0;
+	padding: 9px;
+	width: 162px;
+	background-color: rgba(23, 33, 35, .8);
+}
+
+.agents .agent-info dl dt,
+.agents .agent-info dl dd {
+	margin: 0;
+	padding: 0;
+}
+
+.agents .agent-info dl dt {
+	font-size: 9px;
+	color: #87faff;
+	color: #a3bcc3;
+}
+
+.agents .agent-info dl dd {
+	border-bottom: 1px solid #2e656c;
+	padding-bottom: 2px;
+	margin-bottom: 6px;
+	color: #ffffc9;
+}
+
+.agents .agent-info dl dd.name {
+	font-weight: bold;
+}
+
+.agents .agent-info dl dd time {
+}
+
+.agents ul.exchanges {
+	position: relative;
+	z-index: 200;
+	margin: -29px 0 0 0;
+	padding: 0 0 0 9px;
+	overflow: hidden;
+}
+
+.agents ul.exchanges li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	margin: 0 6px 0 0;
+	padding: 0 9px;
+
+	line-height: 20px;
+	height: 20px;
+	background-color: #2f3e43;
+	font-weight: normal;
+	color: #658b94;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+#targetselector {
+	position: relative;
+	width: 100%;
+	border-radius: 4px;
+	box-shadow: inset 9px 9px 72px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 0, 0, 0.5);
+	background-color: #1f2323;
+	border: 1px solid #060707;
+	-webkit-transition: box-shadow linear 0.5s;
+	transition: box-shadow linear 0.5s;
+	background-image: url(../img/agents-bg3.jpg);
+	background-position: bottom right;
+}
+
+#pointer {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+
+	-webkit-box-shadow: 0 0 10px #9ecaed, 0 0 10px #9ecaed inset;
+	box-shadow: 0 0 10px #9ecaed, 0 0 10px #9ecaed inset;
+}
+
+.agentstyle.style1 { background-color: #81d0df; }
+.agentstyle.style2 { background-color: #ffca00; }
+.agentstyle.style3 { background-color: #573f01; }
+.agentstyle.style4 { background-color: #fe6b4a; }
+.agentstyle.style5 { background-color: #c1c1c1; }
